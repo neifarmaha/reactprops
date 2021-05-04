@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Profile from './component/profile/Profile'
 
 function App() {
+  const handleClick = (name) => alert(name)
+  const name="Maha"
+  const profession ="Web developper" 
+  const bio = "............."
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile name={name} profession={profession} bio={bio} handleClick={handleClick}>
+        <img src="https://pbs.twimg.com/profile_images/1118807558683230208/OOTToLbK.jpg" alt="" className=" pt-4 " 
+        width={220}
+        height={250}
+        />
+      </Profile>
     </div>
   );
 }
